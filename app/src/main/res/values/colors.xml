@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    Black
+    <color name="black">#1a1a1c</color>
+    Gray
+    <color name="charcoalGray">#36454F</color>
+    <color name="onyxGrey">#353839</color>
+    White
+    <color name="white">#FFFFFFFF</color>
+    Blue
+    <color name="navyBlue">#000080</color>
+    Teal
+    <color name="aquamarine">#7fffd6</color>
+    <color name="brightTeal">#03f8c5</color>
+    <color name="cadetBlue">#5f9f9e</color>
+    <color name="commonTeal">#009293</color>
+    <color name="crystalTeal">#02647e</color>
+    <color name="darkTeal">#035e5d</color>
+    <color name="darkerTeal">#024d4f</color>
+    Yellow
+    <color name="darkGold">#d3a939</color>
+    <color name="brightGold">#dcbf57</color>
+</resources>
