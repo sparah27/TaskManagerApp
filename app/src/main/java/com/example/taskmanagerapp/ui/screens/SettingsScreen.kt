@@ -1,4 +1,4 @@
-package com.example.taskmanagerapp.ui.theme
+package com.example.taskmanagerapp.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.example.taskmanagerapp.ui.screens.TopNavigationBar
 
 @Composable
 fun SettingsScreen(navController: NavHostController) {

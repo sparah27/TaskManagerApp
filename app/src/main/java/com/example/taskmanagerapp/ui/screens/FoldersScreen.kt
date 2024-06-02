@@ -1,6 +1,6 @@
-// FoldersScreen.kt
-package com.example.taskmanagerapp.ui.theme
+package com.example.taskmanagerapp.ui.screens
 
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,42 +20,43 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.taskmanagerapp.R
+import com.example.taskmanagerapp.ui.theme.CrystalTeal
 
-@Composable
-fun FoldersScreen(navController: NavHostController) {
-    Scaffold(
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = { navController.navigate("new_folder") },
-                containerColor = CrystalTeal,
-                content = {
-                    Icon(
-                        imageVector = ImageVector.vectorResource(id = R.drawable.add_folder_icon),
-                        contentDescription = "Add Folder",
-                        modifier = Modifier.size(24.dp)
-                    )
-                },
-                modifier = Modifier.padding(16.dp)
-            )
-        },
-        content = { paddingValues ->
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues),
-                contentAlignment = Alignment.TopCenter
-            ) {
-                Column(
+    @Composable
+    fun FoldersScreen(navController: NavHostController) {
+        Scaffold(
+            floatingActionButton = {
+                FloatingActionButton(
+                    onClick = { navController.navigate("new_folder") },
+                    containerColor = CrystalTeal,
+                    content = {
+                        Icon(
+                            imageVector = ImageVector.vectorResource(id = R.drawable.add_folder_icon),
+                            contentDescription = "Add Folder",
+                            modifier = Modifier.size(24.dp)
+                        )
+                    },
+                    modifier = Modifier.padding(16.dp)
+                )
+            },
+            content = { paddingValues ->
+                Box(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp)
+                        .fillMaxSize()
+                        .padding(paddingValues),
+                    contentAlignment = Alignment.TopCenter
                 ) {
-                    TopNavigationBar(navController)
-                    Spacer(modifier = Modifier.height(8.dp))
-                    SearchBar()
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp)
+                    ) {
+                        TopNavigationBar(navController)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        SearchBar()
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
                 }
             }
-        }
-    )
-}
+        )
+    }

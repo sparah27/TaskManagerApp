@@ -1,4 +1,4 @@
-package com.example.taskmanagerapp.ui.theme
+package com.example.taskmanagerapp.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -31,18 +31,19 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.taskmanagerapp.R
+import com.example.taskmanagerapp.ui.theme.CrystalTeal
 
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
         composable("home") { HomeScreen(navController) }
-        composable("folders") { FoldersScreen(navController)}
-        composable("new_folder") { NewFolderScreen(navController)}
-        composable("settings") { SettingsScreen(navController)}
-        composable("new_note") { NewNoteScreen(navController)}
+        composable("folders") { FoldersScreen(navController) }
+        composable("new_folder") { NewFolderScreen(navController) }
+        composable("settings") { SettingsScreen(navController) }
+        composable("new_note") { NewNoteScreen(navController) }
     }
-    }
+}
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
